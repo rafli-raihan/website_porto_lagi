@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafli's | Contact</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0b0f19;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #111827;
+            padding: 20px;
+            border-bottom: 2px solid #1f2937;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        .nav-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #3b82f6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            color: #9ca3af;
+            margin-bottom: 30px;
+        }
+        .social-list {
+            list-style: none;
+            padding: 0;
+        }
+        .social-list li {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .social-list a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-list a:hover {
+            text-decoration: underline;
+        }
+        
+        /* WAJIB: STYLING FORM KONTAK */
+        form {
+            background-color: #111827;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #1f2937;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #9ca3af;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #1e293b;
+            border: 1px solid #4b5563;
+            border-radius: 6px;
+            color: #ffffff;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        button {
+            background-color: #3b82f6;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Rafli's/contact</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Posts</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Kolom Kiri: Informasi Sosial Media Sesuai Teks Desain -->
+        <div class="contact-info">
+            <h2>Let's connect!</h2>
+            <p>Feel free to get in touch if you'd like to collaborate or just say hello!</p>
+            
+            <ul class="social-list">
+                <li>📸 Instagram: <a href="#">@rafli_username</a></li>
+                <li>💬 Discord: <a href="#">rafli#0000</a></li>
+                <li>📘 Facebook: <a href="#">Rafli Official</a></li>
+                <li>💻 Github: <a href="#">github.com/rafli-dev</a></li>
+                <li>✉️ Email: <a href="#">rafli@email.com</a></li>
+            </ul>
+        </div>
+
+        <!-- Kolom Kanan: Form Wajib Integrasi dengan JS Eksternal -->
+        <div>
+            <!-- Menghubungkan Form Event ke Fungsi Validasi di script.js -->
+            <form id="contactForm" onsubmit="return validateForm(event)">
+                <h3>Send a Message</h3>
+                <div class="form-group">
+                    <label for="txtNama">Name</label>
+                    <input type="text" id="txtNama" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="txtEmail">Email Address</label>
+                    <input type="email" id="txtEmail" placeholder="yourname@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="txtPesan">Message</label>
+                    <textarea id="txtPesan" rows="5" placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="submit">Submit Message</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

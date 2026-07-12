@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 1. CSS Variables (:root) */
+:root {
+    /* Wireframe Scheme dari PDF */
+    --bg-placeholder: #f3f4f6;
+    --border-placeholder: #d1d5db;
+    --text-muted: #7b7b7b;
+
+    /* Warna Button Primary */
+    --btn-primary-bg: #FF5757;
+    --btn-primary-text: #ffffff;
+    --btn-primary-border: #ff9494;
+    --btn-primary-hover-bg: #ff9494;
+
+    /* Warna Button Secondary */
+    --btn-secondary-text: #9ca3af;
+    --btn-secondary-border: #4b5563;
+    --btn-secondary-hover-text: #ffffff;
+    --btn-secondary-hover-border: #9ca3af;
+}
+
+/* 2. Element Selector */
+body {
+    font-family: 'Fira Sans','Arial', sans-serif;
+    background-color: #ffffff; /* Menggunakan background putih bersih sesuai PDF[cite: 2] */
+    color: #000000;            /* Teks utama hitam pekat[cite: 2] */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+nav {
+    padding: 20px;
+}
+
+/* 3. Class Selector */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 20px;
+    color: #7b7b7b;
+}
+
+.nav-links a {
+    color: #6a6a6b;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a.active {
+    color: #000000;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+/* BUTTON STYLES (Menggunakan :root Variables) */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border: 1px solid var(--btn-primary-border);
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--btn-secondary-text);
+    border: 1px solid var(--btn-secondary-border);
+}
+
+.btn-secondary:hover {
+    color: var(--btn-secondary-hover-text);
+    border-color: var(--btn-secondary-hover-border);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+/* Elemen Kotak Placeholder (Untuk Grid Unsplash, Thumbnail Project, & Gambar Blog)[cite: 2] */
+.placeholder-box {
+    background-color: var(--bg-placeholder);
+    color: #000000;
+    border: 1px solid var(--border-placeholder);
+    border-radius: 12px; /* Sudut membulat halus sesuai layout PDF[cite: 2] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    padding: 20px;
+}
+
+/* Helper Class untuk Layout Konten Halaman */
+.container {
+    max-width: 90vw;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
