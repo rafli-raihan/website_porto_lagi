@@ -9,10 +9,11 @@
         h2 {
             font-size: 28px;
             margin-bottom: 5px;
+            
             text-align: center;
         }
         .subtitle {
-            /* color: #9ca3af; */
+            color: #b2b2b2;
             margin-bottom: 25px;
             text-align: center;
         }
@@ -23,22 +24,18 @@
             border-collapse: collapse;
             margin-bottom: 60px;
         }
+
         th, td {
-            /* border: 1px solid #1f2937; */
+            border: 1px solid #dddddd;
             padding: 20px;
             text-align: left;
             vertical-align: top;
         }
 
-        /* th {
-            background-color: #111827;
-            color: #3b82f6;
-        } */
-
         .table-thumb {
-            width: 120px;
-            height: 80px;
-            /* background-color: #1e3a8a; */
+            width: 200px;
+            height: 120px;
+            background-color: #1e3a8a;
             border-radius: 6px;
             display: flex;
             align-items: center;
@@ -62,6 +59,7 @@
             gap: 20px;
             margin-top: 20px;
         }
+
         .grid-item {
             background-color: #0000cd;
             height: 180px;
@@ -72,7 +70,7 @@
             font-weight: 500;
             text-align: center;
             padding: 10px;
-            /* border: 1px solid #3b82f6; */
+            border: 1px solid #3b82f6;
         }
     </style>
 </head>
@@ -80,7 +78,7 @@
 
     <nav>
         <div class="nav-container">
-            <div class="logo">Rafli's/projects_gallery</div>
+            <div class="logo">Rafli's / <span>projects_gallery</span></div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
@@ -101,8 +99,6 @@
                 <tr>
                     <th>Thumbnail</th>
                     <th>Project</th>
-                    <th>Thumbnail</th>
-                    <th>Project</th>
                 </tr>
             </thead>
             <tbody>
@@ -112,24 +108,15 @@
                         <div class="proj-title">Project satu</div>
                         <div class="proj-desc">deskripsi pendek maks 2 kalimat yang memuat detail esensial proyek web app.</div>
                     </td>
+                </tr>
+                <tr>
                     <td><div class="table-thumb">Thumbnail</div></td>
                     <td>
                         <div class="proj-title">Project dua</div>
                         <div class="proj-desc">Pengembangan game seru menggunakan engine serbaguna berskala ringan.</div>
                     </td>
                 </tr>
-                <tr>
-                    <td><div class="table-thumb">Thumbnail</div></td>
-                    <td>
-                        <div class="proj-title">Project tiga</div>
-                        <div class="proj-desc">Sistem integrasi backend database dengan efisiensi tinggi serta arsitektur clean.</div>
-                    </td>
-                    <td><div class="table-thumb">Thumbnail</div></td>
-                    <td>
-                        <div class="proj-title">Project empat</div>
-                        <div class="proj-desc">Aplikasi utilitas otomasi tugas harian berbasis scripting modern.</div>
-                    </td>
-                </tr>
+               
             </tbody>
         </table>
 
