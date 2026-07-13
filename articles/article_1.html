@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafli's | Blog Posts</title>
+    <link rel="stylesheet" href="../base.css">
+    <style>
+        /* SINGLE POST VIEW (UTUH) */
+        .article-full {
+            padding-top: 20px;
+        }
+
+        .article-title {
+            font-size: 5vh;
+            margin-bottom: 10px;
+        }
+
+        .article-img-box {
+            background-color: #2f2f30;
+            width: 100%;
+            max-width: 80%;
+            aspect-ratio: 16 / 9;
+            margin: 20px auto;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .article-content{
+            /* margin: 2% 10% 10% 10%; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .article-content p {
+            color: var(--text-paragraph);
+            text-align: justify;
+            text-indent: 30px;
+            margin-bottom: 15px;
+        }
+
+        .post-meta{
+            color: var(--text-muted);
+        }
+
+        .tag-container {
+            margin-top: 20px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #dddddd;
+            color: var(--text-paragraph);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Rafli's / <span>something_2_read</span></div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About Me</a>
+                <a href="../gallery.html">Gallery</a>
+                <a href="../blog.html" class="active">Posts</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="article-full">
+            <h1 class="article-title">Releasing Your Music in the Big '26</h1>
+            <div class="post-meta">⏱ 10 min read &nbsp;&nbsp; 📅 2024-06-26</div>
+            
+            <div class="article-img-box">Gambar (opsional)</div>
+            
+            <div class="article-content">
+                <p>
+                    Minim aliqua mollit duis irure exercitation et nulla consequat nostrud nisi dolore occaecat amet. Id ad amet voluptate eu cillum. Enim sint consectetur mollit occaecat commodo fugiat tempor enim non sit. Proident pariatur aute ad deserunt eiusmod ea sit dolor occaecat in. Incididunt aliquip anim est sit veniam Lorem in aute duis officia pariatur laboris occaecat proident. Eu est sint nulla ut ex et ipsum tempor fugiat qui.
+                </p>
+                <p>
+                    Laborum mollit deserunt officia commodo veniam ullamco nulla minim occaecat duis esse. Non eiusmod nisi esse non excepteur adipisicing do irure sint non. Quis velit eiusmod aliquip aliqua nostrud dolore et cillum incididunt anim commodo dolor do.
+                </p>
+            </div>
+            
+            <div class="tag-container">
+                <strong>Tags:</strong>
+                <span class="tag">Tag1</span>
+                <span class="tag">Tag2</span>
+                <span class="tag">GameDev</span>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
