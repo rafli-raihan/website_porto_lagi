@@ -18,7 +18,7 @@
             margin: auto;
             min-height: 80vh;
             text-align: center;
-            background-image: url('assets/hero-bg.png');
+            background-image: url('assets/hero_bg.png');
             background-position: top;
             background-repeat: no-repeat;
         }
@@ -39,6 +39,24 @@
         .btn-group {
             display: flex;
             gap: 15px;
+        }
+
+        @media screen and (max-width:800px) {
+            #hero-title {
+                font-size: 50px;
+            }
+
+            .subtitle{
+                font-size: 14px;
+            }
+
+            #hero-title, .subtitle{
+                padding: 0 40px 0 40px;
+            }
+
+            .btn-group{
+                flex-direction: column;
+            }
         }
     </style>
 </head>
