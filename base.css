@@ -15,8 +15,8 @@
     --btn-primary-hover-bg: #ff9494;
 
     /* Warna Button Secondary */
-    --btn-secondary-text: #9ca3af;
-    --btn-secondary-border: #4b5563;
+    --btn-secondary-text: #757575;
+    --btn-secondary-border: #656565;
     --btn-secondary-hover-text: #ffffff;
     --btn-secondary-hover-border: #9ca3af;
 }
@@ -75,7 +75,7 @@ nav {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    border-radius: 6px;
+    border-radius: 14px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s, color 0.3s, border-color 0.3s;
@@ -98,8 +98,24 @@ nav {
 }
 
 .btn-secondary:hover {
+    color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-bg);
+}
+
+.btn-secondary-alt {
+    background-color: transparent;
     color: var(--btn-secondary-hover-text);
+    border: 1px solid var(--btn-secondary-hover-text);
+}
+
+.btn-secondary-alt:hover {
+    color: var(--btn-secondary-hover-border);
     border-color: var(--btn-secondary-hover-border);
+}
+
+.btn-disabled {
+    background-color: var(--btn-secondary-hover-border);
+    color: var(--btn-primary-text);
 }
 
 footer {
