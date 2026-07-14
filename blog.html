@@ -16,6 +16,8 @@
 
         .post-list {
             min-height: 70vh;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .blog-header {
@@ -35,15 +37,14 @@
         }
 
         .blog-thumb {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            max-width: 30%;
+            aspect-ratio: 16/9;
             background-color: #1e293b;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: #4b5563;
         }
 
         .post-meta {
@@ -52,10 +53,14 @@
             margin-bottom: 5px;
         }
 
-        .post-card h3 {
+        .post-card a {
             margin: 0 0 10px 0;
-            font-size: 20px;
+            font-size: 3vh;
             color: var(--btn-primary-bg);
+        }
+
+        .post-card a:hover {
+            color: var(--btn-primary-hover-bg);
         }
 
         .post-card p {
@@ -68,6 +73,20 @@
             text-align: center;
             margin: 40px 0;
             color: #9ca3af;
+        }
+
+        @media screen and (max-width: 800px){
+            .post-card{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                aspect-ratio: 1/1;
+            }
+
+            .blog-thumb {
+                width: 100%;
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -93,13 +112,15 @@
         
             <!-- List Post 1 -->
             <div class="post-card">
-                <div class="blog-thumb">Thumbnail</div>
+                <div 
+                    class="blog-thumb"
+                    style="background-image: url('assets/thumbnails/L1030254.JPG');"></div>
                 <div>
                     <div class="post-meta">5 min read &bull; 2024-06-26</div>
-                    <a href="articles/article_1.html" style="font-weight: bold; font-size: 32px;">
-                        Releasing Your Music in the Big 26
+                    <a href="articles/article_1.html">
+                        Releasing Your First Music in the Big '26 (as a WNI, SEUMUR HIDUP)
                     </a>
-                    <p> The good, the bad, the ugly and why you should do it anyway....</p>
+                    <p> The good, the bad, the ugly and why we do it anyway?</p>
                 </div>
             </div>
         </div>
