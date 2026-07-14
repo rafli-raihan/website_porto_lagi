@@ -1,30 +1,28 @@
-// script.js - File JS Eksternal untuk Website Rafli
+const errorMessages = [
+    "so... what's the message, {name}??",
+    "don't forget to write your message, {name}.",
+    "sorry {name}, the message your trying to send seems corrupted.",
+    "try sending it again {name}."
+]
 
-console.log("Rafli's Website Script Loaded Successfully.");
-
-// Fungsi validasi Form Kontak
 function validateForm(event) {
-    event.preventDefault(); // Mencegah form reload halaman otomatis
-    
-    // 1. Operator Penugasan (Assignment Operator '=')
+    event.preventDefault();
     var name = document.getElementById("txtNama").value;
-    var email = document.getElementById("txtEmail").value;
     var message = document.getElementById("txtPesan").value;
-    
-    // 2. Operator Perbandingan (Comparison Operator '===') dan Logika
-    if (name === "" || email === "" || message === "") {
-        // Memicu Alert jika form kosong
-        alert("Peringatan: Mohon lengkapi semua data formulir sebelum mengirim!");
+
+    if ( name === "") {
+        name = "Anon";
+    }
+
+    if ( message === "") {
+        var randomIndex = Math.floor(Math.random() * errorMessages.length); // Ini buat milih index random buat error message nya gaada pickany() kek di godot soalnya
+        var randomError = errorMessages[randomIndex].replace("{name}", name);
+        alert("Error: " + randomError);
         return false;
     }
-    
-    // 3. Operator Aritmatika/String Concatenation ('+')
-    var successMessage = "Halo " + name + "! Pesan Anda berhasil terkirim. Rafli akan membalas ke email: " + email;
-    
-    // Memicu Alert sukses
+
+    var successMessage = "Halo " + name + "! Thanks for the message :D";
     alert(successMessage);
-    
-    // Reset Form
     document.getElementById("contactForm").reset();
     return true;
 }

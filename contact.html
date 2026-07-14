@@ -10,8 +10,8 @@
             display: flex;
             gap: 50px;
             align-items: center;
-            justify-content: space-evenly;
-            min-height: 75vh;
+            justify-content: center;
+            min-height: 70vh;
         }
         
         h2 {
@@ -44,11 +44,12 @@
             text-decoration: underline;
         }
         
+     
         /* WAJIB: STYLING FORM KONTAK */
         form {
+            width: 100%;
             color: #ffffff;
             background-image: url('assets/hero_bg.png');
-            min-width: 300px;
             padding: 30px;
             border-radius: 10px;
             border: 1px solid #e5e5e5;
@@ -128,11 +129,11 @@
         @media screen and (max-width:800px){
             .container{
                 flex-direction: column;
-                align-items: start;
-            }
+                    justify-content: center;
+                }
 
             form {
-                min-width: none;
+                width: auto;
             }
         }
     </style>
@@ -176,7 +177,7 @@
                                 		<animate fill="freeze" attributeName="opacity" begin="1.3s" dur="0.2s" to="1" />
                                 	</circle>
                                 </svg>
-                                <span>@rafli_r4ihan</span>
+                                <span>&nbsp;@rafli_r4ihan</span>
                             </button>
                         </a>
                     </td>
@@ -194,35 +195,35 @@
                                 		</path>
                                 	</g>
                                 </svg>
-                                <span>Rafli Raihan</span>
+                                <span>&nbsp;Rafli Raihan</span>
                             </button>
                         </a>
                     </td>
                 </tr>
                 <tr>
-                    <!-- DC -->
+                    <!-- Linkedin -->
                     <td>
-                        <a href="https://discord.com/users/541256846091091985" target="_blank" rel="noopener noreferrer">
-                            <button id="sosmed-btn" style="background-color: #9a17eb;">
+                        <a href="https://www.linkedin.com/in/muhammad-rafli-raihan-6336a4294/" target="_blank" rel="noopener noreferrer">
+                            <button id="sosmed-btn" style="background-color: #1785eb;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                                	<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                                		<path stroke-dasharray="32" d="M12 6h2l1 -2c0 0 2.5 0.5 4 1.5c3.53 2.35 3 9.5 3 10.5c-1.33 2.17 -5.5 3.5 -5.5 3.5l-1 -2M12 6h-2l-0.97 -2c0 0 -2.5 0.5 -4 1.5c-3.53 2.35 -3 9.5 -3 10.5c1.33 2.17 5.5 3.5 5.5 3.5l1 -2">
-                                			<animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="32;0" />
+                                	<circle cx="4" cy="4" r="2" fill="currentColor" opacity="0">
+                                		<animate fill="freeze" attributeName="opacity" dur="0.2s" to="1" />
+                                	</circle>
+                                	<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                                		<g stroke-dasharray="12" stroke-dashoffset="12">
+                                			<path d="M4 10v10">
+                                				<animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" to="0" />
+                                			</path>
+                                			<path d="M10 10v10">
+                                				<animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" to="0" />
+                                			</path>
+                                		</g>
+                                		<path stroke-dasharray="24" stroke-dashoffset="24" d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5">
+                                			<animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" to="0" />
                                 		</path>
-                                		<path stroke-dasharray="16" stroke-dashoffset="16" d="M5.5 16c5 2.5 8 2.5 13 0">
-                                			<animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.5s" to="0" />
-                                		</path>
-                                	</g>
-                                	<g fill="currentColor">
-                                		<circle cx="9" cy="12">
-                                			<animate fill="freeze" attributeName="r" begin="1.3s" dur="0.2s" to="1.5" />
-                                		</circle>
-                                		<circle cx="15" cy="12">
-                                			<animate fill="freeze" attributeName="r" begin="1.5s" dur="0.2s" to="1.5" />
-                                		</circle>
                                 	</g>
                                 </svg>
-                                <span>JiwaMadDog</span>
+                                <span>&nbsp;Rafli Raihan</span>
                             </button>
                         </a>
                     </td>
@@ -240,7 +241,7 @@
                                 		</path>
                                 	</g>
                                 </svg>
-                                <span>rafli-raihan</span>
+                                <span>&nbsp;rafli-raihan</span>
                             </button>
                         </a>
                     </td>
@@ -273,7 +274,7 @@
         </div>
 
         <!-- Kolom Kanan: Form Wajib Integrasi dengan JS Eksternal -->
-        <div>
+        <div class="form-col">
             <!-- Menghubungkan Form Event ke Fungsi Validasi di script.js -->
             <form id="contactForm" onsubmit="return validateForm(event)">
                 <h3>Send a Message (Anonymously)</h3>
